@@ -2,33 +2,36 @@
 
 ## Overview
 
-This repository contains Natural Language Processing projects completed as part of my MSc Artificial Intelligence at Heriot-Watt University.
+This repository contains Natural Language Processing projects completed during my MSc Artificial Intelligence at Heriot-Watt University.
 
-The work explores two connected areas of NLP:
+The work investigates two connected areas of NLP:
 
 1. Representation learning using Word2Vec embeddings
 2. Neural machine translation using BiLSTM, attention, and Transformer models
 
-The projects demonstrate experience in training, evaluating, and analysing NLP models using semantic similarity, analogy reasoning, BLEU scores, training curves, and qualitative translation analysis.
+The projects evaluate how modelling choices influence representation quality and translation performance through systematic experimentation and quantitative evaluation.
 
-## Project 1: Word2Vec Representation Learning
+# Project 1 – Word2Vec Representation Learning
 
-This project investigated how different training settings affect the quality of learned word embeddings.
+## Objective
 
-Key tasks included:
+Investigate how corpus size and model hyperparameters influence the quality of learned semantic word representations.
 
-* Training Word2Vec models on different corpus sizes
-* Evaluating semantic similarity using cosine similarity and Spearman correlation
-* Comparing small and large corpus embeddings
-* Exploring the effect of vector size, context window, and epochs
-* Analysing word analogies and gender bias in pretrained embeddings
+## Methodology
+
+The project trained Word2Vec embeddings on small and large WikiText corpora and evaluated representation quality using cosine similarity, Spearman correlation against human similarity judgements, pretrained Google News embeddings, analogy reasoning, and hyperparameter comparisons.
 
 ### Key Findings
 
-* Larger training corpora produced stronger semantic representations than smaller corpora.
-* The best tuned Word2Vec model achieved a Spearman correlation of approximately 0.644.
-* Pretrained Google News Word2Vec embeddings achieved stronger performance, with a Spearman correlation of approximately 0.683.
-* Analogy analysis showed that pretrained embeddings can encode social and gender-based stereotypes.
+- Larger corpora produced substantially stronger semantic representations than smaller datasets.
+- Increasing embedding dimensionality improved performance on the large corpus, but provided limited benefit for the small corpus.
+- The best tuned Word2Vec model achieved a Spearman correlation of approximately 0.644.
+- Pretrained Google News embeddings achieved stronger alignment with human semantic judgements, with a Spearman correlation of approximately 0.683.
+- Analogy experiments demonstrated that learned embeddings captured semantic relationships while also revealing gender-related biases inherited from training data.
+
+## Limitations
+
+The custom embeddings were trained on relatively small corpora compared with industrial-scale pretrained models. Consequently, evaluation scores remained below the Google News embeddings despite hyperparameter optimisation. Future work could investigate larger corpora, subword embeddings such as FastText, or contextual language models.
 
 ## Project 2: Neural Machine Translation
 
