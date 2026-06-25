@@ -7,19 +7,30 @@ This repository contains Natural Language Processing projects completed during m
 The work investigates two connected areas of NLP:
 
 1. Representation learning using Word2Vec embeddings
-2. Neural machine translation using BiLSTM, attention, and Transformer models
+2. Neural machine translation using BiLSTM, attention mechanisms, and Transformer models
 
 The projects evaluate how modelling choices influence representation quality and translation performance through systematic experimentation and quantitative evaluation.
 
-# Project 1 – Word2Vec Representation Learning
+## Project 1 – Word2Vec Representation Learning
 
 ## Objective
 
 Investigate how corpus size and model hyperparameters influence the quality of learned semantic word representations.
 
-## Methodology
+## Experimental Design
 
-The project trained Word2Vec embeddings on small and large WikiText corpora and evaluated representation quality using cosine similarity, Spearman correlation against human similarity judgements, pretrained Google News embeddings, analogy reasoning, and hyperparameter comparisons.
+Word2Vec embeddings were trained on the WikiText-103 corpus using both small and large corpus variants. Representation quality was evaluated using cosine similarity, Spearman correlation against human similarity judgements, comparison with pretrained Google News embeddings, analogy reasoning, and systematic hyperparameter experiments.
+
+### Implementation
+
+The project involved:
+
+* Training Word2Vec embeddings on WikiText-103 small and large corpora
+* Preprocessing text through tokenisation and stopword removal
+* Evaluating semantic similarity using cosine similarity and Spearman correlation
+* Comparing custom embeddings with pretrained Google News embeddings
+* Investigating the effects of embedding dimensionality, corpus size, context window, and vocabulary size through hyperparameter experiments
+* Exploring semantic analogies and gender-related bias in pretrained embeddings
 
 ### Key Findings
 
@@ -31,28 +42,40 @@ The project trained Word2Vec embeddings on small and large WikiText corpora and 
 
 ## Limitations
 
-The custom embeddings were trained on relatively small corpora compared with industrial-scale pretrained models. Consequently, evaluation scores remained below the Google News embeddings despite hyperparameter optimisation. Future work could investigate larger corpora, subword embeddings such as FastText, or contextual language models.
+The custom embeddings were trained on relatively small corpora compared with industrial-scale pretrained models. Consequently, evaluation scores remained below the Google News embeddings despite hyperparameter optimisation. 
 
 ## Project 2: Neural Machine Translation
 
-This project explored neural machine translation using deep learning sequence models.
+## Objective
 
-Key tasks included:
+Investigate how neural sequence models and Transformer architectures influence machine translation performance.
 
-* Implementing BiLSTM encoder-decoder models
-* Applying attention mechanisms
-* Comparing model capacity and training behaviour
+## Experimental Design
+
+English-to-French neural machine translation models were implemented using the Multi30k parallel corpus. BiLSTM encoder-decoder architectures with attention mechanisms and Transformer models were trained and evaluated using BLEU scores alongside qualitative analysis of generated translations.
+
+### Implementation
+
+The project involved:
+
+* Implementing BiLSTM encoder-decoder architectures with global attention
+* Implementing and evaluating decoder-only Transformer models with multi-head attention
+* Comparing model capacity through controlled hyperparameter experiments
 * Evaluating translation quality using BLEU scores
-* Analysing generated translations and model errors
-* Exploring Transformer-based translation models
+* Analysing attention heatmaps to interpret model behaviour
+* Performing qualitative error analysis on generated translations across different linguistic phenomena
 
 ### Key Findings
 
-* Increasing model capacity improved translation performance substantially.
-* Medium-sized models achieved stronger BLEU scores than smaller models.
-* The best medium BiLSTM model achieved a BLEU score of approximately 49.17.
-* Training larger models was limited by available computational resources.
-* BLEU scores provided useful quantitative comparison, but qualitative analysis was also needed to understand translation errors.
+- Increasing model capacity improved translation performance substantially.
+- Medium-sized models achieved stronger BLEU scores than smaller models.
+- The best medium BiLSTM model achieved a BLEU score of approximately 49.17.
+- Training larger models was limited by available computational resources.
+- BLEU scores provided a quantitative measure of translation quality, while qualitative analysis helped identify grammatical errors, semantic inaccuracies, and patterns that numerical scores alone could not capture.
+
+## Limitations
+
+Model performance was constrained by available computational resources, limiting exploration of larger architectures and longer training schedules. Future work could investigate larger Transformer models, pretrained multilingual language models, and additional evaluation metrics beyond BLEU.
 
 ## Technologies Used
 
@@ -63,7 +86,6 @@ Key tasks included:
 * NumPy
 * pandas
 * Weights & Biases
-* Jupyter Notebook
 
 ## Repository Structure
 
@@ -73,14 +95,11 @@ word2vec/
 
 machine-translation/
   neural-machine-translation.ipynb
-
-images/
-  project screenshots and result figures
 ```
 
 ## Notes
 
-This repository is intended for portfolio and educational purposes. Datasets and large trained model files are not included.
+This repository is intended for portfolio and educational purposes. The experiments can be reproduced using the provided notebooks and the referenced datasets and code dependencies.
 
 ## Author
 
@@ -88,3 +107,4 @@ Mercy Nthiwa
 MSc Artificial Intelligence
 Heriot-Watt University
 
+Interests: Artificial Intelligence, Natural Language Processing, Machine Learning, and AI for Healthcare.
