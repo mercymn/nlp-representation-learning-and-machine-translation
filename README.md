@@ -7,7 +7,7 @@ This repository contains Natural Language Processing projects completed during m
 The work investigates two connected areas of NLP:
 
 1. Representation learning using Word2Vec embeddings
-2. Neural machine translation using BiLSTM encoder-decoder architectures with attention mechanisms and decoder-only Transformer models.
+2. Neural machine translation using BiLSTM encoder-decoder architectures with attention mechanisms and decoder-only Transformer models
 
 The projects evaluate how modelling choices influence representation quality and translation performance through systematic experimentation and quantitative evaluation.
 
@@ -82,7 +82,7 @@ Model performance was constrained by available computational resources, limiting
 
 ## Example Results
 
-The figures below present representative attention visualisations produced by the BiLSTM and Transformer models during translation. Additional visualisations are available in `machine-translation/part3/`.
+The figures below show representative attention visualisations produced by the BiLSTM and Transformer models during translation. Additional visualisations are available in `machine-translation/part3/`.
 
 ### BiLSTM Encoder–Decoder Attention
 
@@ -92,7 +92,7 @@ The attention heatmap illustrates how the BiLSTM encoder-decoder model aligns so
 
 ### Decoder-only Transformer Attention
 
-The visualisation illustrates attention distributions across multiple layers and attention heads in the decoder-only Transformer model, highlighting how different heads capture complementary relationships between tokens during translation.
+The visualisation illustrates attention distributions across multiple layers and attention heads in the decoder-only Transformer model, demonstrating how different attention heads capture complementary linguistic relationships between tokens during translation.
 
 ![Transformer Multi-Head Attention](machine-translation/part3/trans_example1.png)
 
