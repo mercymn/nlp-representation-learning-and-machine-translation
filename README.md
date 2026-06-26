@@ -69,13 +69,17 @@ The project involved:
 
 - Increasing model capacity improved translation performance substantially.
 - Medium-sized models achieved stronger BLEU scores than smaller models.
-- The best medium BiLSTM model achieved a BLEU score of approximately 49.17.
+- The best submitted BiLSTM model achieved a BLEU score of approximately 49.17.
+- The large Transformer model achieved a BLEU score of approximately 49.74.
 - Training larger models was limited by available computational resources.
 - BLEU scores provided a quantitative measure of translation quality, while qualitative analysis helped identify grammatical errors, semantic inaccuracies, and patterns that numerical scores alone could not capture.
+- W&B was used to monitor training and validation loss across model runs.
+- Attention heatmaps were generated to inspect model behaviour during translation.
+- Attention heatmaps were used to inspect model behaviour and support qualitative translation analysis.
 
 ## Limitations
 
-Model performance was constrained by available computational resources, limiting exploration of larger architectures and longer training schedules. Future work could investigate larger Transformer models, pretrained multilingual language models, and additional evaluation metrics beyond BLEU.
+Model performance was constrained by available computational resources, limiting further exploration of larger architectures and longer training schedules. Future work could investigate larger Transformer models, pretrained multilingual language models, and additional evaluation metrics beyond BLEU.
 
 ## Technologies Used
 
