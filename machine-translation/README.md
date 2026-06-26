@@ -1,14 +1,14 @@
 # Neural Machine Translation Codebase
 
-This folder contains the source code and submitted outputs for the neural machine translation component of the NLP project.
+This folder contains the source code and evaluation outputs for the neural machine translation component of the NLP project.
 
 ## Structure
 
 ```text
-part1/      BiLSTM encoder-decoder model with dot-product/global attention
-part2/      Decoder-only Transformer with multi-head self-attention and causal masking
-part3/      Attention heatmaps used for qualitative analysis
-outputs/    Submitted JSON result files containing BLEU scores and generated translations
+part1/      BiLSTM encoder-decoder implementation with dot-product/global attention
+part2/      Decoder-only Transformer implementation with multi-head self-attention and causal masking
+part3/      Prsovided attention heatmaps for qualitative analysis of generated translations
+outputs/    JSON result files containing BLEU scores and generated translations
 ```
 
 ## Key Scripts
@@ -23,4 +23,4 @@ outputs/    Submitted JSON result files containing BLEU scores and generated tra
 
 Generated folders and files such as `.venv/`, `multi30k_data/`, `models/`, `vocab/`, `wandb/`, optimizer states, and model checkpoints are not included in this GitHub version. They can be regenerated during setup/training and are excluded to keep the repository clean and safe for public sharing.
 
-Any Weights & Biases API keys must be provided by the user locally and should never be committed to GitHub.
+Weights & Biases logging is optional. If enabled, users should configure their own API credentials locally.
