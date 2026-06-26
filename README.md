@@ -82,7 +82,7 @@ Model performance was constrained by available computational resources, limiting
 
 ## Example Results
 
-The figures below show representative attention visualisations produced by the BiLSTM and Transformer models during translation. Additional visualisations are available in `machine-translation/part3/`.
+The figures below show representative attention visualisations produced by the BiLSTM and Transformer models during translation. Additional visualisations are available in the [machine-translation/part3](machine-translation/part3/) directory.
 
 ### BiLSTM Encoder–Decoder Attention
 
@@ -106,24 +106,15 @@ The visualisation illustrates attention distributions across multiple layers and
 * pandas
 * Weights & Biases
 
-## Repository Structure
-
-```text
-word2vec/
-  word2vec-representation-learning.ipynb
-
-machine-translation/
-  neural-machine-translation.ipynb
-```
-
 ## Notes
 
 This repository is intended for portfolio and educational purposes. The experiments can be reproduced using the provided notebooks and the referenced datasets and code dependencies.
 
 ## Author
 
-Mercy Nthiwa
-MSc Artificial Intelligence
+**Mercy Nthiwa**
+
+MSc Artificial Intelligence  
 Heriot-Watt University
 
-Interests: Artificial Intelligence, Natural Language Processing, Machine Learning, and AI for Healthcare.
+**Interests:** Artificial Intelligence, Natural Language Processing, Machine Learning, and AI for Healthcare.
