@@ -7,7 +7,7 @@ This repository contains Natural Language Processing projects completed during m
 The work investigates two connected areas of NLP:
 
 1. Representation learning using Word2Vec embeddings
-2. Neural machine translation using BiLSTM, attention mechanisms, and Transformer models
+2. Neural machine translation using BiLSTM encoder-decoder architectures with attention mechanisms and decoder-only Transformer models.
 
 The projects evaluate how modelling choices influence representation quality and translation performance through systematic experimentation and quantitative evaluation.
 
@@ -74,12 +74,27 @@ The project involved:
 - Training larger models was limited by available computational resources.
 - BLEU scores provided a quantitative measure of translation quality, while qualitative analysis helped identify grammatical errors, semantic inaccuracies, and patterns that numerical scores alone could not capture.
 - W&B was used to monitor training and validation loss across model runs.
-- Attention heatmaps were generated to inspect model behaviour during translation.
 - Attention heatmaps were used to inspect model behaviour and support qualitative translation analysis.
 
 ## Limitations
 
 Model performance was constrained by available computational resources, limiting further exploration of larger architectures and longer training schedules. Future work could investigate larger Transformer models, pretrained multilingual language models, and additional evaluation metrics beyond BLEU.
+
+## Example Results
+
+The figures below present representative attention visualisations produced by the BiLSTM and Transformer models during translation. Additional visualisations are available in `machine-translation/part3/`.
+
+### BiLSTM Encoder–Decoder Attention
+
+The attention heatmap illustrates how the BiLSTM encoder-decoder model aligns source and target tokens during translation, showing strong word-level correspondences and interpretable alignment patterns.
+
+![BiLSTM Attention Heatmap](machine-translation/part3/bilstm_example1.png)
+
+### Decoder-only Transformer Attention
+
+The visualisation illustrates attention distributions across multiple layers and attention heads in the decoder-only Transformer model, highlighting how different heads capture complementary relationships between tokens during translation.
+
+![Transformer Multi-Head Attention](machine-translation/part3/trans_example1.png)
 
 ## Technologies Used
 
